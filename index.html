@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>롬앤 (Rom&nd) - 공식 온라인 스토어</title>
+    <title>롬앤 (Rom&nd)</title>
     <link rel="stylesheet" href="style.css"> </head> 
 <body>
     <header>
-        <nav>
-            <div class="top-nav">
-                <ul>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#">마이페이지</a></li>
-                    <li><a href="#">장바구니</a></li>
+        <nav class="nav-bar">
+            <!-- 왼쪽 메뉴 -->
+             <div>
+                <p class="nav-menu">menu</p>
+                <ul class="nav-left">
+                    <li><a href="#">베스트</a></li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">립</a></li>
+                    <li><a href="#">아이</a></li>
+                    <li><a href="#">베이스</a></li>
+                    <li><a href="#">클린 뷰티</a></li>
+                    <li><a href="#">기획전</a></li>
                 </ul>
-            </div>
+             </div>
+
+            <!-- 가운데 로고 -->
             <div class="main-logo">
-                <img src="logo.png" alt="롬앤 로고"> </div>
-            <ul class="main-nav">
-                <li><a href="#">베스트</a></li>
-                <li><a href="#">신상품</a></li>
-                <li><a href="#">립</a></li>
-                <li><a href="#">아이</a></li>
-                <li><a href="#">베이스</a></li>
-                <li><a href="#">클린 뷰티</a></li>
-                <li><a href="#">기획전</a></li>
+                <img src="logo.png" alt="롬앤 로고">
+            </div>
+
+            <!-- 오른쪽 유틸 메뉴 -->
+            <ul class="nav-right">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
             </ul>
         </nav>
     </header>
@@ -33,8 +38,12 @@
     <main>
         <section class="hero-section">
             <div class="hero-content">
-                <img src="hero-banner.jpg" alt="NEW WARM LINE-UP" class="hero-image"> <h2>NEW WARM LINE-UP</h2>
-                <button>자세히 보기</button> </div>
+                <div class="video_wrapper">
+                    <a id="linkTag" href="https://romand.co.kr/article/%EC%9D%B4%EB%B2%A4%ED%8A%B8/13/178962/">
+                        <video autoplay="" muted="" loop="" playsinline="" src="https://cdn.romand.io/romand/media/kmpmj5GjJP4VQwKPeW1SkGV4KmqeIyEc5IcZelH0.mp4"></video>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section class="new-arrivals-banner">
