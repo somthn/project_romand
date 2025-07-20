@@ -6,6 +6,12 @@
     <title>롬앤 (Rom&nd)</title>
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
+    <!-- swiper.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,27 +102,33 @@
             </div>
           </div>
         </div>
-        <div class="item-grid">
-          <div class="product-card">
-            <img src="best-item-lip.jpg" alt="Best Item Lip Tint" />
-            <p class="product-name">제로 매트 립스틱</p>
-            <p class="product-price">12,000원</p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="best-item-lip.jpg" alt="Best Item Lip Tint" />
+              <p class="product-name">제로 매트 립스틱</p>
+              <p class="product-price">12,000원</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="product-blush.jpg" alt="베러 댄 치크" />
+              <p class="product-name">베러 댄 치크</p>
+              <p class="product-price">10,000원</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="product-eyeshadow.jpg" alt="베러 댄 팔레트" />
+              <p class="product-name">베러 댄 팔레트</p>
+              <p class="product-price">20,000원</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="product-tint.jpg" alt="듀이풀 워터 틴트" />
+              <p class="product-name">듀이풀 워터 틴트</p>
+              <p class="product-price">11,000원</p>
+            </div>
           </div>
-          <div class="product-card">
-            <img src="product-blush.jpg" alt="베러 댄 치크" />
-            <p class="product-name">베러 댄 치크</p>
-            <p class="product-price">10,000원</p>
-          </div>
-          <div class="product-card">
-            <img src="product-eyeshadow.jpg" alt="베러 댄 팔레트" />
-            <p class="product-name">베러 댄 팔레트</p>
-            <p class="product-price">20,000원</p>
-          </div>
-          <div class="product-card">
-            <img src="product-tint.jpg" alt="듀이풀 워터 틴트" />
-            <p class="product-name">듀이풀 워터 틴트</p>
-            <p class="product-price">11,000원</p>
-          </div>
+          <!-- 네비게이션 (옵션) -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -185,5 +197,6 @@
         <p>&copy; 2025 Rom&nd. All rights reserved.</p>
       </div>
     </footer>
+    <script type="text/javascript" src="./script/main.js"></script>
   </body>
 </html>

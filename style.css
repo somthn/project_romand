@@ -94,7 +94,6 @@ header {
 
 .hero-section  {
   width: 100%;
-  height: 100vh;
   background: linear-gradient(to bottom, #C9E1F9, #BCDFF5);
 
   /* background-image: url(./img/flower.png);
@@ -127,8 +126,7 @@ header {
  */
 
  .main-img > img {
-  height: 100vh;
-  width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -181,7 +179,8 @@ header {
   margin: 20px 0;
 }
 
-.best-items .main-best-item {
+/* best item 슬라이드 */
+/* .best-items .main-best-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,16 +197,46 @@ header {
 .main-best-item-slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 200%; /* 두 개의 아이템을 가로로 나열하기 위해 200% */
+  width: 200%; 
 }
 
 .slider-item {
-  width: 100%; /* 각 아이템이 전체 너비를 차지하도록 설정 */
+  width: 100%; 
   padding: 20px;
   box-sizing: border-box;
+
+  flex-shrink: 0;
 }
 
 .slider-item img {
   width: 100%;
   height: auto;
+} */
+
+.main-best-item-slider {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.slider-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-item img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-item.active {
+  opacity: 1;
+  z-index: 1;
 }
