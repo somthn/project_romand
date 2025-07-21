@@ -5,11 +5,27 @@
   box-sizing: border-box;
 }
 
+/* root 변수 */
+:root {
+  --button-primary-color: #b9daff; /*기본 버튼 색상(연하늘)*/
+  --button-hover-color: rgba(93, 169, 255, 1);
+  --button-hover-color2: linear-gradient(
+    90deg,
+    rgba(247, 148, 221, 1) 0%,
+    rgba(100, 149, 237, 1) 100%
+  );
+  --button-padding: 10px 25px;
+  --button-font-size: 16px;
+  --button-text-color: #fff;
+  --button-border-radius: 5px;
+}
+
 /* 2. HTML, Body 기본 스타일 */
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
-  font-family: 'Noto Sans KR', sans-serif; 
+  font-family: "Noto Sans KR", sans-serif;
   color: #000;
   background-color: #fff;
   line-height: 1.6;
@@ -36,7 +52,8 @@ button {
 }
 
 /* 4. 리스트 스타일 제거 */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -53,7 +70,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* 헤더 header */
 
@@ -89,18 +105,16 @@ header {
   padding: 10px;
 }
 
-
 /* 메인 main */
 
-.hero-section  {
+.hero-section {
   width: 100%;
-  background: linear-gradient(to bottom, #C9E1F9, #BCDFF5);
+  background: linear-gradient(to bottom, #c9e1f9, #bcdff5);
 
   /* background-image: url(./img/flower.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 50%; */
-
 }
 
 /* .hero-content {
@@ -125,7 +139,7 @@ header {
 }
  */
 
- .main-img > img {
+.main-img > img {
   height: 100%;
   margin: 0 auto;
 }
@@ -148,7 +162,7 @@ header {
 }
 
 .promotion-info {
-  margin: auto;  /* 핵심: 가로 세로 모두 중앙 정렬 효과 */
+  margin: auto; /* 핵심: 가로 세로 모두 중앙 정렬 효과 */
   text-align: center;
 }
 
@@ -160,13 +174,25 @@ header {
 .promotion-info p:first-child {
   font-size: 3.1rem;
   font-family: "Cherry Bomb One", system-ui;
-  color: lightcoral;
+  color: #f08080;
+}
+
+.sun-buy-now {
+  background-color: var(--button-primary-color);
+  color: var(--button-text-color);
+  font-size: var(--button-font-size);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  transition: 0.3s;
+  margin-top: 50px;
+}
+
+.sun-buy-now:hover {
+  background: var(--button-hover-color);
+  transition: 0.3s;
 }
 
 /* best item */
-.best-items {
-  background-color: cornflowerblue;
-}
 
 .best-items img {
   margin: 0 auto;
@@ -175,8 +201,9 @@ header {
 .best-items h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: white;
-  margin: 20px 0;
+  /* color: white; */
+  /* margin: 20px 0; */
+  padding: 20px 0;
 }
 
 /* best item 슬라이드 */
@@ -239,4 +266,66 @@ header {
 .slider-item.active {
   opacity: 1;
   z-index: 1;
+}
+
+/* swiper slide CSS */
+
+.swiper {
+  max-width: 90%;
+}
+
+.swiper-slide {
+  width: 20%;
+}
+
+.product_info {
+  min-height: 100px;
+}
+
+.swiper-slide img {
+  width: 400px;
+  height: 400px;
+}
+
+.swiper-slide p {
+  text-align: center;
+}
+
+.product-name {
+  height: 3em;
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+.product-price {
+  margin-bottom: 0.8em;
+}
+
+.show-more {
+  margin-top: 30px;
+}
+
+/* 전체 막대 배경 */
+.swiper-pagination-progressbar {
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* 진행되는 막대 색 */
+.swiper-pagination-progressbar-fill {
+  background: #c6008e !important; /* 원하는 브랜드 색 */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  color: #bcdff5;
+  display: block !important;
 }
